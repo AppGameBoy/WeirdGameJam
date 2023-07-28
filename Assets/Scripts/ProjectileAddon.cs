@@ -37,6 +37,11 @@ public class ProjectileAddon : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("floor"))
+        {
+            Destroy(gameObject);
+        }
+
         //make projectile stick to surface 
         rb.isKinematic = true;
 
