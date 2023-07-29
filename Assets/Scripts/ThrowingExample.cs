@@ -13,6 +13,7 @@ public class ThrowingExample : MonoBehaviour
     [Header("Settings")]
     public int totalThrows;
     public float throwCooldown;
+    public TextMeshProUGUI ammoCount;
 
     [Header("Throwing")]
     public float throwForce;
@@ -31,6 +32,9 @@ public class ThrowingExample : MonoBehaviour
         {
             Throw();
         }
+
+        if (ammoCount != null)
+            ammoCount.SetText("Food Left: "+totalThrows);
     }
 
     private void Throw()

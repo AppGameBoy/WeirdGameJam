@@ -37,7 +37,7 @@ public class ProjectileAddon : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.CompareTag("floor"))
+        if (collision.gameObject.CompareTag("floor") || collision.gameObject.CompareTag("wall"))
         {
             Destroy(gameObject);
         }
