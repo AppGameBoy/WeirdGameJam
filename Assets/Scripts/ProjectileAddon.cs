@@ -35,6 +35,8 @@ public class ProjectileAddon : MonoBehaviour
 
             enemy.TakeDamage(damage);
             Destroy(gameObject);
+            GameManager.Instance.IncreaseScore(25);
+            GameManager.Instance.scoreText 
         }
 
         if (collision.gameObject.CompareTag("floor") || collision.gameObject.CompareTag("wall"))
