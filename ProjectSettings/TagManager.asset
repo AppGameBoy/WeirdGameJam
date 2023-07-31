@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - trash
   - floor
+  - Music
   layers:
   - Default
   - TransparentFX

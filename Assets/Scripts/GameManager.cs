@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
+        
         Score = 0;
         //scoreText.text = "Score: " + Score;
     }
