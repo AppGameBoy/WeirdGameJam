@@ -11,7 +11,9 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+        //GameObject.FindGameObjectWithTag("Music").GetComponent<MusicClass>().PlayMusic();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame

@@ -35,14 +35,31 @@ public class ProjectileAddon : MonoBehaviour
 
             enemy.TakeDamage(damage);
             Destroy(gameObject);
-            GameManager.Instance.IncreaseScore(25);
             
+            
+        }
+        if (collision.gameObject.CompareTag("hotdog"))
+        {
+            
+            GameManager.Instance.IncreaseScore(50);
+
+        } else if (collision.gameObject.CompareTag("burger"))
+        {
+            GameManager.Instance.IncreaseScore(25);
+
+        }
+        else if (collision.gameObject.CompareTag("burrito"))
+        {
+            GameManager.Instance.IncreaseScore(10);
+
         }
 
         if (collision.gameObject.CompareTag("floor") || collision.gameObject.CompareTag("wall"))
         {
             Destroy(gameObject);
+            GameManager.Instance.DecreaseTries();
         }
+
 
         //make projectile stick to surface 
         rb.isKinematic = true;

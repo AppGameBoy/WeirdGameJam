@@ -11,9 +11,9 @@ public class ThrowingExample : MonoBehaviour
     public GameObject objectToThrow;
 
     [Header("Settings")]
-    public int totalThrows;
+    //public int totalThrows;
     public float throwCooldown;
-    public TextMeshProUGUI ammoCount;
+    //public TextMeshProUGUI ammoCount;
 
     [Header("Throwing")]
     public float throwForce;
@@ -28,6 +28,7 @@ public class ThrowingExample : MonoBehaviour
 
     private void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Mouse0) && readyToThrow && totalThrows > 0)
         {
             Throw();
@@ -35,6 +36,11 @@ public class ThrowingExample : MonoBehaviour
 
         if (ammoCount != null)
             ammoCount.SetText("Food Left: "+totalThrows);
+        */
+        if (Input.GetKeyDown(KeyCode.Mouse0) && readyToThrow)
+        {
+            Throw();
+        }
     }
 
     private void Throw()
@@ -68,7 +74,7 @@ public class ThrowingExample : MonoBehaviour
 
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
 
-        totalThrows--;
+        //totalThrows--;
 
         // implement throwCooldown
         Invoke(nameof(ResetThrow), throwCooldown);

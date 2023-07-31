@@ -10,6 +10,9 @@ TagManager:
   - trash
   - floor
   - Music
+  - hotdog
+  - burrito
+  - burger
   layers:
   - Default
   - TransparentFX
