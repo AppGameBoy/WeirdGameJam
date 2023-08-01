@@ -27,10 +27,10 @@ public class ProjectileAddon : MonoBehaviour
         }
         //Debug.Log("sss");
         //check if you hit enemy 
-        Debug.Log(collision.gameObject.GetComponent<Enemy>());
+        //Debug.Log(collision.gameObject.GetComponent<Enemy>());
         if (collision.gameObject.GetComponent<Enemy>() !=null)
         {
-            Debug.Log("HIT");
+            //Debug.Log("HIT");
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
             enemy.TakeDamage(damage);

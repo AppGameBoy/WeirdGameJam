@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log("SCore " + Score);
         scoreText.SetText("Score: " + Score);
         tries.SetText("Tries: " + numOfTries);
-        Debug.Log(numOfTries.ToString());
+        
         //IsGameOver(numOfTries);
         if (IsGameOver())
         {

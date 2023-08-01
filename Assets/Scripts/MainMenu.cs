@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public string firstLevel;
     public GameObject optionsScreen;
+    public GameObject instructionScreen;
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene(firstLevel);
+        instructionScreen.SetActive(true);
     }
 
     public void OpenOptions()
@@ -34,6 +36,12 @@ public class MainMenu : MonoBehaviour
     public void CloseOptions()
     {
         optionsScreen.SetActive(false);
+
+    }
+    public void StartGameButton()
+    {
+        SceneManager.LoadScene(firstLevel);
+        instructionScreen.SetActive(false);
 
     }
 

@@ -9,6 +9,8 @@ public class ThrowingExample : MonoBehaviour
     public Transform cam;
     public Transform attackPoint;
     public GameObject objectToThrow;
+    public GameObject[] objectsToThrow;
+
 
     [Header("Settings")]
     //public int totalThrows;
@@ -45,14 +47,15 @@ public class ThrowingExample : MonoBehaviour
 
     private void Throw()
     {
+        int n = Random.Range(0, objectsToThrow.Length);
         readyToThrow = false;
 
         Quaternion q = Quaternion.FromToRotation(Vector3.up, transform.forward);
         objectToThrow.transform.rotation = q * attackPoint.transform.rotation;
 
         // instantiate object to throw
-        GameObject projectile = Instantiate(objectToThrow, attackPoint.position, q);
-        Debug.Log("cam rotation" + cam.rotation);
+        GameObject projectile = Instantiate(objectsToThrow[n], attackPoint.position, q);
+        //Debug.Log("cam rotation" + cam.rotation);
         // get rigidbody component
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
 

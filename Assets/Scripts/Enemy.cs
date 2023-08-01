@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("trash"))
         {
-            Debug.Log("trash");
+            //Debug.Log("trash");
             Destroy(gameObject);
         }
     }
